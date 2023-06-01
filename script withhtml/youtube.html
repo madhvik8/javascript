@@ -1,0 +1,54 @@
+<html>
+    <head><title>JavaScript Functions</title>
+    <p id="javascript"></p>
+    </head> 
+    <body>
+        <script>
+            function My_function(val){
+                document.getElementById("javascript").innerHTML = val*val
+            }
+            My_function(5)
+        </script>
+        <script>
+            var Myfunction = new Function("a","b","return a+b")
+            var x = Myfunction(2,3)
+            document.getElementById("javascript").innerHTML = "The sum is" + x
+            </script>
+            <!-- <script> -->
+                <!--  (function(){ -->
+                    <!--  alert("Hello! Welcome") -->
+                <!--  })() -->
+            <!-- </script> -->
+            <script>
+                function Product(a,b){
+                    return a*b
+                }
+                let y = Product(2,5)*5
+                document.getElementById("javascript").innerHTML = "The product is"  + y
+            </script>
+            <!-- <script>
+                var body = "return Math.PI * rad *rad "
+                var circle = new Function("rad",body);
+                alert(circle(5))
+            </script> -->
+            <script>
+                const Myfunc = (a,b,c) => {return a*b*c}
+                let product = Myfunc(2,3,4)
+                document.getElementById("javascript").innerHTML = "The product of the three digits is"  + product
+            </script>
+            <script>
+                function*generatorFunc(){
+                    yield 1;
+                    yield 2;
+                    return 3;
+                }
+                let generator = generatorFunc();
+                let one = generator.next();
+                let two = generator.next();
+                let three = generator.next();
+                alert(JSON.stringify(one));
+                alert(JSON.stringify(two));
+                alert(JSON.stringify(three));
+            </script>
+    </body>
+</html>
